@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnsinoCrudNetCore", "EnsinoCrudNetCore\EnsinoCrudNetCore.csproj", "{AA389B79-2322-4247-8A4C-20AF9CE09058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{1E282A16-8DD8-4306-B891-69E1BC612DFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA389B79-2322-4247-8A4C-20AF9CE09058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA389B79-2322-4247-8A4C-20AF9CE09058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA389B79-2322-4247-8A4C-20AF9CE09058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA389B79-2322-4247-8A4C-20AF9CE09058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E282A16-8DD8-4306-B891-69E1BC612DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E282A16-8DD8-4306-B891-69E1BC612DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E282A16-8DD8-4306-B891-69E1BC612DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E282A16-8DD8-4306-B891-69E1BC612DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A01B0C1A-9F0C-4E09-9C22-E6BDBA5B9AB3}
+	EndGlobalSection
+EndGlobal
