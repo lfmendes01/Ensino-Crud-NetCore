@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Dto.Curso;
+using WebApi.Entities;
 
 namespace WebApi.Repository.Interface
 {
     public interface ICursoRepository
     {
 
-        List<CursoGetDto> GetAll();
+        IQueryable<Curso> GetAll();
 
-        CursoGetDto Get(int id);
+        IQueryable<Curso> Get(int id);
 
         int Add(CursoPostDto dto);
 

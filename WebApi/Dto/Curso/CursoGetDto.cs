@@ -15,7 +15,11 @@ namespace WebApi.Dto.Curso
 
         public DateTime DataTermino { get; set; }
 
-        public int NumeroAlunos { get; set; }
+        public int? NumeroAlunos { get; set; }
+
+        public int IdCategoria { get; set; }
+
+        public string Categoria { get; set; }
 
     }
 }

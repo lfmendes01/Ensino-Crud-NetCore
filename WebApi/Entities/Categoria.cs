@@ -19,6 +19,6 @@ namespace WebApi.Entities
 
         public int Codigo { get; set; }
 
-
+        public ICollection<Curso> Curso { get; set; }
     }
 }

@@ -39,8 +39,7 @@ namespace WebApi
 
             services.AddScoped<ICursoService, CursoService>();
             services.AddScoped<ICursoRepository, CursoRepository>();
-            //services.AddDbContext<ContaDigitalContext>(o => o.UseSqlServer(
-            //   Configuration.GetConnectionString("MyNewDatabase")));
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 
             services.AddDbContext<EnsinoMemoryContext>(opt => opt.UseInMemoryDatabase(databaseName: "InMemoryDb"),
                ServiceLifetime.Scoped,

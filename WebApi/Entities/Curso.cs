@@ -15,14 +15,21 @@ namespace WebApi.Entities
         [Required]
         public int IdCurso { get; set; }
 
+        [Required]
         public string Descricao { get; set; }
 
+        [Required]
         public DateTime DataInicio { get; set; }
 
+        [Required]
         public DateTime DataTermino { get; set; }
 
-        public int NumeroAlunos { get; set; }
+        public int? NumeroAlunos { get; set; }
 
+        [Required]
+        public int IdCategoria { get; set; }
+
+        public Categoria Categoria { get; set; }
 
     }
 }

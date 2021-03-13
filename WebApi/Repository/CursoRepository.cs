@@ -17,44 +17,23 @@ namespace WebApi.Repository
         {
             db = _db;
         }
-        public CursoGetDto Get(int id)
+        public IQueryable<Curso> Get(int id)
         {
             if (db != null)
             {
-                var query = db.Curso.Find(id);
-                if (query != null)
-                {
-                    var dto = new CursoGetDto()
-                    {
-                        Id = query.IdCurso,
-                        DataInicio = query.DataInicio,
-                        DataTermino = query.DataTermino,
-                        Descricao = query.Descricao,
-                        NumeroAlunos = query.NumeroAlunos
-                    };
-                    return dto;
-                }
-                
+                var query = db.Curso.Where(c=> c.IdCurso == id);
+                return query;
             }
             return null;
         }
 
-        public List<CursoGetDto> GetAll()
+        public IQueryable<Curso> GetAll()
         {
             if (db != null)
             {
-                var query = db.Curso.OrderBy(entity => entity.IdCurso).ToList();
+                var query = db.Curso.OrderBy(entity => entity.IdCurso);
 
-                var dto = query.Select(a => new CursoGetDto()
-                {
-                    Id = a.IdCurso,
-                    DataInicio = a.DataInicio,
-                    DataTermino = a.DataTermino,
-                    Descricao = a.Descricao,
-                    NumeroAlunos = a.NumeroAlunos
-                }).ToList();
-
-                return dto;
+                return query;
             }
             return null;
         }
@@ -62,13 +41,13 @@ namespace WebApi.Repository
 
         public int Add(CursoPostDto dto)
         {
-
             Curso entity = new Curso()
             {
                 DataInicio = dto.DataInicio,
                 DataTermino = dto.DataTermino,
                 NumeroAlunos = dto.NumeroAlunos,
-                Descricao = dto.Descricao
+                Descricao = dto.Descricao,
+                IdCategoria = dto.IdCategoria
             };
 
             var entityEntry = db.Add(entity);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Dto.Curso;
+using WebApi.Dto.Retorno;
 
 namespace WebApi.Service.Interface
 {
@@ -12,7 +13,7 @@ namespace WebApi.Service.Interface
 
         IList<CursoGetDto> GetAll();
 
-        int Add(CursoPostDto dto);
+        ServiceResult Add(CursoPostDto dto);
 
         bool Update(int id, CursoPostDto dto);
         bool Delete(int id);

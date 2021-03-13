@@ -15,5 +15,7 @@ namespace WebApi.Dto.Curso
 
         public int NumeroAlunos { get; set; }
 
+        public int IdCategoria { get; set; }
+
     }
 }
